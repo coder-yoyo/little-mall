@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <link href="<%= BASE_URL %>logo.png" rel="icon" />
+    <title>YO商城</title>
+    <script type="text/javascript">
+      (function () {
+        var userAgent = navigator.userAgent;
+        window.addEventListener("resize", function () {
+          if (navigator.userAgent !== userAgent) {
+            location.reload();
+          }
+        });
+      })();
+    </script>
+    <script src="<%= BASE_URL %>js/flexible.js" type="text/javascript"></script>
+    <% if(htmlWebpackPlugin.options.isProd) { %>
+    <!-- 引入Vue -->
+    <script src="https://cdn.staticfile.org/vue/2.6.11/vue.min.js"></script>
+    <!-- 引入vant的js -->
+    <script src="https://cdn.jsdelivr.net/npm/vant@2.9.0/lib/vant.min.js"></script>
+    <!-- 引入better-scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/better-scroll@1.15.2/dist/bscroll.min.js"></script>
+    <% } %>
+  </head>
+  <body class="body">
+    <div id="app"></div>
+  </body>
+</html>
